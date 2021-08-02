@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TVH</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>
+                    Iron Man
+                </h1>
+            </div>
+            <div>
+                <center>
+                    <q><strong>I am Iron man</strong></1>
+                </center>
+                <p>Tony Stark</p>
+            </div>
+        </header>
+        <div id="content">
+                <div class="image">
+                    <img src="/static/pics/01.jpg" class="pic" alt="pic1" id="img1">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/02.jpg" class="pic" alt="pic2" id="img2">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/03.jpg" class="pic" alt="pic3" id="img3">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/04.jpg" class="pic" alt="pic4" id="img4">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/05.jpg" class="pic" alt="pic5" id="img5">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/06.jpg" class="pic" alt="pic6" id="img6">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/07.jpg" class="pic" alt="pic7" id="img7">
+                </div>
+                <div class="image">
+                    <img src="/static/pics/08.jpg" class="pic" alt="pic8" id="img8">
+                </div>
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    </body>
+    <script>
+        var modal = document.getElementById("myModal");
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var arrimg = document.getElementsByClassName("pic");
+        var modalImg = document.getElementById("img01");
+        for (var i=0; i < arrimg.length; i++){
+            var img = document.getElementsByClassName("pic")[i];
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+</html>
